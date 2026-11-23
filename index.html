@@ -206,7 +206,6 @@ footer p{margin:0 0 6px}
   .sek{padding:60px 0}
   .dwa{grid-template-columns:minmax(0,1fr)}
   form{padding:24px 20px}
-  .osoba img{width:76px}
   .ak figure{display:none}
   .droga:before{left:60px}
   .droga li{grid-template-columns:50px 23px minmax(0,1fr)}
@@ -224,6 +223,12 @@ footer p{margin:0 0 6px}
   .hero .lead{margin:16px 0 24px}
   .hero .podpis{margin-top:18px}
 }
+/* zdjęcia ze starej strony: nigdy ponad natywną rozdzielczość (160x234, 367x247) */
+@media (min-resolution:1.4dppx){.osoba img{width:114px}.ak figure img{width:262px}}
+@media (min-resolution:1.9dppx){.osoba img{width:84px}.ak figure img{width:193px}}
+@media (min-resolution:2.4dppx){.osoba img{width:66px}.ak figure img{width:152px}}
+@media (min-resolution:2.9dppx){.osoba img{width:55px}.ak figure img{width:126px}}
+@media (min-resolution:3.4dppx){.osoba img{width:47px}.ak figure img{width:108px}}
 </style>
 </head>
 <body>
