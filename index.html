@@ -419,7 +419,7 @@ var mob=d.getElementById('mob'),hb=d.querySelector('.hero .btn');
 if('IntersectionObserver' in window){
   new IntersectionObserver(function(e){mob.classList.toggle('widac',!e[0].isIntersecting&&e[0].boundingClientRect.top<0)}).observe(hb);
   var m=d.getElementById('mapa');
-  new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();var f=d.createElement('iframe');f.title='Mapa dojazdu do gabinetu';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.src='https://maps.google.com/maps?q=Tulipanowa%206%2C%2087-134%20Przysiek&z=15&output=embed';m.appendChild(f)}},{rootMargin:'300px'}).observe(m);
+  new IntersectionObserver(function(e,o){if(e[0].isIntersecting){o.disconnect();var f=d.createElement('iframe');f.title='Mapa dojazdu do gabinetu';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.src='https://maps.google.com/maps?q=Tulipanowa%206%2C%2087-134%20Przysiek&z=15&output=embed';m.innerHTML='';m.appendChild(f)}},{rootMargin:'300px'}).observe(m);
 }
 var l=d.getElementById('metodyLista'),k=d.querySelectorAll('#kropki i');
 l.addEventListener('scroll',function(){var w=l.firstElementChild.offsetWidth+14,i=Math.round(l.scrollLeft/w);if(l.scrollLeft+l.clientWidth>=l.scrollWidth-4)i=k.length-1;k.forEach(function(x,j){x.classList.toggle('on',j===i)})},{passive:true});
